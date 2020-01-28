@@ -26,11 +26,14 @@ pkgTest <- function(pkg){
 # here is where you load any necessary packages
 # ex: stringr
 # lapply(c("stringr"),  pkgTest)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
 
 lapply(c(),  pkgTest)
 
 # set working directory
-setwd("~/Documents/GitHub/QTM200Spring2020/problem_sets/PS1")
+setwd("~/GitHub/QTM200Spring2020/problem_sets/PS1")
 
 
 #####################
@@ -60,8 +63,19 @@ right
 #####################
 # Problem 2
 #####################
-
+#Conducting a test with 0.05 significance level 
+#assumptions are: continous data, random sample, the sample size is bigger (shown through formula)
 y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
+
+#null hypothesis Ho: pi < pio 
+pio <- 100
+pi <- mean(y)
+pi
+ts <- qt(.95, df=n-1)*s/sqrt(n)
+ts
+p = pt(abs(ts), df=n-1, lower.tail=F)
+p
+#the p value is well below the threshold of 0.05, therefore you reject the null and state that the average IQ of the students in her school is equal or higher to the average IQ score among all the schools in the country. 
 
 #####################
 # Problem 3
@@ -70,3 +84,23 @@ y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 8
 y <- c(1, 2, 1, 3, 4, 1, 1, 4, 2, 1, 3, 4, 3, 2, 1, 3, 4, 1, 2, 3, 1, 1, 2, 1, 1, 3, 4)
 
 expenditure <- read.table("expenditure.txt", header=T)
+str(expenditure)
+
+ggplot(expenditure, aes(x=X1, y=Y))+
+  geom_point()
+
+ggplot(expenditure, aes(x=X2, y=Y))+
+  geom_point()
+
+ggplot(expenditure, aes(x=X3, y=Y))+
+  geom_point()
+
+ggplot(expenditure, aes(x=Region, y=Y))+
+  geom_point()
+
+ggplot(expenditure, aes(x=X1, y=Y))+
+  geom_point()
+
+ggplot(expenditure, aes(x=X1, y=Y, color=Region))+
+  geom_point()
+

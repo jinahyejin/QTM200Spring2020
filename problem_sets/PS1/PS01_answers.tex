@@ -81,20 +81,39 @@
 A private school counselor was curious about the average of IQ of the students in her school and took a random sample of 25 students' IQ scores. The following is the data set:
 \vspace{.5cm}
 
-\lstinputlisting[language=R, firstline=40, lastline=40]{PS1.R}  
+\lstinputlisting[language=R, firstline=40, lastline=40]{PS1 - answers.R}  
 
 \vspace{.5cm}
 
 \noindent Find a 90\% confidence interval for the student IQ in the school assuming the population of IQ from which our random sample has been selected is normally distributed. 
 
+\lstinputlisting[language=R, firstline=42, lastline=57]{PS1-answers.R}
+
+In order to find the confidence interval, the mean and standard deviation of the data was determined and stated as "m" and "s" respectively. Then I assigned "n" as the total number of sample. With these variables, the error could be determined by the use of a t-distribution as the number of samples is less than 30, thus illustrating a small sample. 
+With the confidence interval being 90\%, we determined the 5\% error on each side of the t-distribution. In order to determine the lower confidence interval, the difference between the mean and error was determined. To determine the upper confidence interval, the sum of the mean and error was determined. 
+
+It was found that the 90\% confidence interval for the student IQ in the school is 93.96 and 102.92
+
 \vspace{1cm}
 \section*{Question 2 (25 points)}
 A private school counselor was curious  whether  the average of IQ of the students in her school is higher than the average IQ score 100 among all the schools in the country. She took a random sample of 25 students' IQ scores. The following is the data set:
 \vspace{.5cm}
-\lstinputlisting[language=R, firstline=46, lastline=46]{PS1.R}  
+\lstinputlisting[language=R, firstline=65, lastline=65]{PS1-answers.R}  
 \vspace{.5cm}
 
 \noindent Conduct a test with 0.05 significance level assuming the population of IQ from which our random sample has been selected is normally distributed. 
+ 
+ \lstinputlisting[language=R, firstline=63, lastline=74]{PS1-answers.R}
+ 
+To conduct a test with 0.05 significance level, first the assumptions need to be stated. 
+The data is continuous, random sampling and the sample is distributed normally. 
+
+The null hypothesis is _________ and the alternative hypothesis is ___________. 
+
+The population is mean is 100 (pio), while the sample mean is 98.44. 
+The test statistic is determined by using a t-distribution with the confidence interval being 0.95 as this is a one-sided test. The t-distribution is used as this is a small sample (less than 30). With the test statistic, the p-value is determined to be closer to be 7.79e-5, which is smaller than 0.05, and thus leading to rejecting the null hypothesis. 
+We can state that the average IQ of the students in her school is equal or higher to the average IQ score among the population. 
+
  
 \vspace{1cm}
 	\section*{Question 3 (50 points)}
@@ -126,6 +145,11 @@ Assume $y$ is variable with values 1,2,3,4 standing for ``Freshman", ``Sophomore
 \item
 Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3}? What are the correlations among them? Describe the graph and the relationships among them.
 \vspace{.5cm}
+
+\usepackage{graphicx}
+\graphicspath{{./PS1/}}
+\includegraphics{Y vs X1}
+
 \item
 Please plot the relationship between \emph{Y} and \emph{Region}? On average, which region does have the highest per capita expenditure on public education?
 \vspace{.5cm}
