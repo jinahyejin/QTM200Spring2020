@@ -29,6 +29,7 @@ pkgTest <- function(pkg){
 library(tidyr)
 library(dplyr)
 library(ggplot2)
+library(tikzDevice)
 
 lapply(c(),  pkgTest)
 
@@ -100,7 +101,10 @@ ggplot(expenditure, aes(x=Region, y=Y))+
 
 ggplot(expenditure, aes(x=X1, y=Y))+
   geom_point()
+typeof(expenditure$Region)
+expenditure[,'Region'] <- factor(expenditure[,'Region'])
+class(expenditure$Region)
 
-ggplot(expenditure, aes(x=X1, y=Y, color=Region))+
-  geom_point()
+ggplot(expenditure, aes(x=X1, y=Y, color=Region, group=Region))+
+  geom_point(aes(shape=Region))
 
