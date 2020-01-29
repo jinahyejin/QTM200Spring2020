@@ -99,8 +99,6 @@ ggplot(expenditure, aes(x=X3, y=Y))+
 ggplot(expenditure, aes(x=Region, y=Y))+
   geom_point()
 
-ggplot(expenditure, aes(x=X1, y=Y))+
-  geom_point()
 typeof(expenditure$Region)
 expenditure[,'Region'] <- factor(expenditure[,'Region'])
 class(expenditure$Region)

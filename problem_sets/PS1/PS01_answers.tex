@@ -89,8 +89,8 @@ A private school counselor was curious about the average of IQ of the students i
 
 \lstinputlisting[language=R, firstline=46, lastline=60]{PS1-answers.R}
 
-In order to find the confidence interval, the mean and standard deviation of the data was determined and stated as "m" and "s" respectively. Then I assigned "n" as the total number of sample. With these variables, the error could be determined by the use of a t-distribution as the number of samples is less than 30, thus illustrating a small sample. 
-With the confidence interval being 90\%, we determined the 5\% error on each side of the t-distribution. In order to determine the lower confidence interval, the difference between mean and error was determined. To determine the upper confidence interval, the sum of mean and error was determined. 
+In order to find the confidence interval, the mean and standard deviation of the data was determined and stated as "m" and "s" respectively. The mean came out to be 98.44 and the standard deviation came out to be 13.09. Then I assigned "n" as the total number of sample, which is 25. With these variables, the error could be determined by the use of a t-distribution as the number of samples is less than 30, thus illustrating a small sample. 
+With the confidence interval being 90\%, we determined the 5\% error on each side of the t-distribution. The error came out to be 4.48. In order to determine the lower confidence interval, the difference between mean and error was determined. To determine the upper confidence interval, the sum of mean and error was determined. 
 
 It was found that the 90\% confidence interval for the student IQ in the school is 93.96 and 102.92
 
@@ -108,10 +108,10 @@ A private school counselor was curious  whether  the average of IQ of the studen
 To conduct a test with 0.05 significance level, first the assumptions need to be stated. 
 The data is continuous, random sampling and the sample is distributed normally. 
 
-The null hypothesis is $\nu$ $<$ 100 and the alternative hypothesis is $\nu$ $\geq$ 100. 
+The null hypothesis is $\mu$ $<$ 100 and the alternative hypothesis is $\mu$ $\geq$ 100. 
   
 The population is mean is 100, while the sample mean is 98.44. 
-The test statistic is determined by using a t-distribution with the confidence interval being 0.95 as this is a one-sided test. The t-distribution is used as this is a small sample (less than 30). With the test statistic, the p-value is determined to be $7.79\times10^{-5}$, which is smaller than 0.05, and thus leading to rejecting the null hypothesis. 
+The test statistic is determined by using a t-distribution with the confidence interval being 0.95 as this is a one-sided test. The t-distribution is used as this is a small sample (less than 30). The test statistic came out to be 4.48 (which is identical to the error of Question 1) and with this, the p-value is determined to be $7.79\times10^{-5}$, which is smaller than 0.05, and thus leading to rejecting the null hypothesis. 
 We can state that the average IQ of the students in her school is equal or higher to the average IQ score among the population. 
 
  
@@ -146,21 +146,30 @@ Assume $y$ is variable with values 1,2,3,4 standing for ``Freshman", ``Sophomore
 Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3}? What are the correlations among them? Describe the graph and the relationships among them.
 \vspace{.5cm}
 
+\lstinputlisting[language=R, firstline=90, lastline=91]{PS1-answers.R}
+
 \includegraphics{Y vs X1}
 
-This graph illustrates a slight positive correlation 
+This graph illustrates a slight positive correlation showing that as per capita personal income increases, the capita expenditure on public education also increases. 
+
+\lstinputlisting[language=R, firstline=93, lastline=94]{PS1-answers.R}
 
 \includegraphics{Y vs X2}
 
-This graph illustrates no correlation, as most of the data is on the lower end of the x axis.
+This graph illustrates no correlation, as most of the data is on the lower end of the x axis but the Y axis is spread. This could be said that the population with more minors by proportion would end up actually spending expenditure on public education as there is a population catered towards them. The more residents per thousand under 18 years of age, the less or will mostly likely not spend on public education. 
+
+\lstinputlisting[language=R, firstline=96, lastline=97]{PS1-answers.R}
 
 \includegraphics{Y vs X3}
 
-This graph is shown to also have no correlation, however the data is more spread out throughout the y and x axis
+This graph is shown to also have no correlation, however the data is more spread out throughout the y and x axis. This illustrates that there is no correlation between the number of people per thousand residing in urban areas to the expenditure on public education. 
+
+The three graphs illustrate that the higher personal income within the region, the more expenditure on public education. The regions with the most minors tend to have expenditure on public education, while the regions with less minors have shown to have low or no expenditure, all regardless of whether the region is urban or not. 
 
 \item
 Please plot the relationship between \emph{Y} and \emph{Region}? On average, which region does have the highest per capita expenditure on public education?
 
+\lstinputlisting[language=R, firstline=99, lastline=100]{PS1-answers.R}
 
 \includegraphics{Y vs Region}
 
@@ -170,7 +179,12 @@ Region 4 on average has the highest per capital expenditure on public education 
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors.
 
+\lstinputlisting[language=R, firstline=103, lastline=107]{PS1-answers.R}
+I had to change the Region from a continuous variable to a factor as it could not categorize Region into shape due to the fact that the data type was continuous. 
+
 \includegraphics{Y vs X1R}
+
+The graph illustrate that in X2 data set, the Region 4 seems to have the highest per capita expenditure on public education in addition to having a higher capita of personal income. It is shown that Region 3 seems to have the lowest capita of personal income on average, and thus also have the lowest average in expenditure on public education. 
 
 
 \end{itemize}
