@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.28)  9 FEB 2020 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.28)  10 FEB 2020 10:38
 entering extended mode
-**./PS01_answers.tex
-(PS01_answers.tex
+**"./PS2 answers.tex"
+("PS2 answers.tex"
 LaTeX2e <2019-10-01> patch level 3
 ("C:\Users\Jina\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
@@ -1041,8 +1041,8 @@ File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 \c@hyp=\count163
- (PS01_answers.aux)
-\openout1 = `PS01_answers.aux'.
+ ("PS2 answers.aux")
+\openout1 = `"PS2 answers.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -1128,13 +1128,20 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
- (PS01_answers.out) (PS01_answers.out)
+ ("PS2 answers.out") ("PS2 answers.out")
 \@outlinefile=\write7
-\openout7 = `PS01_answers.out'.
+\openout7 = `"PS2 answers.out"'.
 
 
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count171
+ [1
+
+{C:/Users/Jina/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
 
 ("C:\Users\Jina\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.s
 ty"
@@ -1149,71 +1156,75 @@ ty"
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 84.
- (PS1-answers.R
+nput line 101.
+ (PS2answers.R
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-4.
+.
 
 ("C:\Users\Jina\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 44.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 4.
 )
-(PS1-answers.R [1
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
-{C:/Users/Jina/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) (PS1-answer
-s.R) (PS1-answers.R) [2] (PS1-answers.R) (PS1-answers.R)
-(PS1-answers.R)
-<Y vs X1.png, id=55, 362.10281pt x 406.51875pt>
-File: Y vs X1.png Graphic file (type png)
-<use Y vs X1.png>
-Package pdftex.def Info: Y vs X1.png  used on input line 151.
-(pdftex.def)             Requested size: 362.10191pt x 406.51775pt.
- [3] (PS1-answers.R)
-<Y vs X2.png, id=70, 362.10281pt x 406.51875pt>
-File: Y vs X2.png Graphic file (type png)
-<use Y vs X2.png>
-Package pdftex.def Info: Y vs X2.png  used on input line 157.
-(pdftex.def)             Requested size: 362.10191pt x 406.51775pt.
- [4 <./Y vs X1.png>] (PS1-answers.R)
-<Y vs X3.png, id=79, 362.10281pt x 406.51875pt>
-File: Y vs X3.png Graphic file (type png)
-<use Y vs X3.png>
-Package pdftex.def Info: Y vs X3.png  used on input line 163.
-(pdftex.def)             Requested size: 362.10191pt x 406.51775pt.
+ []
 
-[5 <./Y vs X2.png>] (PS1-answers.R)
-<Y vs Region.png, id=88, 362.10281pt x 406.51875pt>
-File: Y vs Region.png Graphic file (type png)
-<use Y vs Region.png>
-Package pdftex.def Info: Y vs Region.png  used on input line 174.
-(pdftex.def)             Requested size: 362.10191pt x 406.51775pt.
- [6 <./Y vs X3.png>] (PS1-answers.R)
-[7 <./Y vs Region.png>]
-<Y vs X1R.png, id=109, 362.10281pt x 406.51875pt>
-File: Y vs X1R.png Graphic file (type png)
-<use Y vs X1R.png>
-Package pdftex.def Info: Y vs X1R.png  used on input line 185.
-(pdftex.def)             Requested size: 362.10191pt x 406.51775pt.
- [8 <./Y vs X1R.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
- (PS01_answers.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
-Package rerunfilecheck Info: File `PS01_answers.out' has not changed.
+(PS2answers.R) [2] (PS2answers.R) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+<../women_desc.png, id=58, 750.805pt x 300.12125pt>
+File: ../women_desc.png Graphic file (type png)
+<use ../women_desc.png>
+Package pdftex.def Info: ../women_desc.png  used on input line 148.
+(pdftex.def)             Requested size: 516.73338pt x 206.5664pt.
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 148--149
+ [][] 
+ []
+
+[4 <../women_desc.png>] (PS2answers.R)
+<Q2.png, id=67, 311.66437pt x 487.8225pt>
+File: Q2.png Graphic file (type png)
+<use Q2.png>
+Package pdftex.def Info: Q2.png  used on input line 169.
+(pdftex.def)             Requested size: 311.6636pt x 487.8213pt.
+ [5] [6 <./Q2.png>] (PS2answers.R)
+[7] (PS2answers.R) [8] (PS2answers.R)
+<Q32.png, id=109, 374.90062pt x 482.55281pt>
+File: Q32.png Graphic file (type png)
+<use Q32.png>
+Package pdftex.def Info: Q32.png  used on input line 213.
+(pdftex.def)             Requested size: 374.8997pt x 482.55162pt.
+ (PS2answers.R [9 <./Q32.png>])
+(PS2answers.R)
+<Q33.png, id=122, 374.90062pt x 482.55281pt>
+File: Q33.png Graphic file (type png)
+<use Q33.png>
+Package pdftex.def Info: Q33.png  used on input line 227.
+(pdftex.def)             Requested size: 374.8997pt x 482.55162pt.
+ [10] [11 <./Q33.png>] (PS2answers.R) [12] (PS2answers.R)
+(PS2answers.R) (PS2answers.R [13]) [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
+ ("PS2 answers.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
+Package rerunfilecheck Info: File `"PS2 answers".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 23985 strings out of 492484
- 419254 string characters out of 3122054
- 746999 words of memory out of 3000000
- 27755 multiletter control sequences out of 15000+200000
- 15071 words of font info for 62 fonts, out of 3000000 for 9000
+ 24077 strings out of 492484
+ 420591 string characters out of 3122054
+ 754477 words of memory out of 3000000
+ 27768 multiletter control sequences out of 15000+200000
+ 15070 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,60p,3246b,2109s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,8n,60p,3247b,2186s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Jina\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1000.pk> <C:\Users\Jina\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
 /dpi600\tcrm1200.pk><C:/Users/Jina/AppData/Local/Programs/MiKTeX 2.9/fonts/type
@@ -1225,14 +1236,16 @@ na/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 C:/Users/Jina/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmr17.pfb><C:/Users/Jina/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmr6.pfb><C:/Users/Jina/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jina/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jina/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Jina/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jina
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS01_answers.pdf (8 pages, 174546 bytes).
+1/public/amsfonts/cm/cmr7.pfb><C:/Users/Jina/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jina/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jina/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Jina/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
+Users/Jina/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
+t12.pfb>
+Output written on "PS2 answers.pdf" (14 pages, 235623 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 297 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
