@@ -119,8 +119,12 @@ mean(c$upr)
 mean(c$lwr)
 
 # Question 7
-
-ggplot(fruitfly, aes(y=lifespan, x= thorax))+
+fruitflies <- ggplot(data = fruitfly, aes(y=lifespan, x=thorax))+
   geom_point()+
-  geom_line(aes(y=lwr), data=new_fruitfly, color = "red", linetype="dashed")+
-  geom_line(aes(y=upr), color = "red", linetype = "dashed")
+  geom_smooth(method = "lm")
+
+predict_fruitflies <- fruitflies + geom_line(aes(y=p$lwr), color = "red", linetype = "dashed")+
+  geom_line(aes(y=p$upr), color ="red", linetype = "dashed") +
+  geom_line(aes(y=c$lwr), color="purple", linetype = "dashed")+
+  geom_line(aes(y=c$upr), color = "purple", linetype = "dashed")
+predict_fruitflies
