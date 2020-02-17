@@ -85,7 +85,7 @@
 \noindent We are interested in knowing how the difference in campaign spending between incumbent and challenger affects the incumbent's vote share. 
 	\begin{enumerate}
 		\item Run a regression where the outcome variable is \texttt{voteshare} and the explanatory variable is \texttt{difflog}.	
-		\lstinputlisting[language=R, firstline=8, lastline=13]{PS3Answers.R}  
+		\lstinputlisting[language=R, firstline=8, lastline=11]{PS3Answers.R}  
 			\begin{verbatim}
 	Residuals:
 	Min       1Q   Median       3Q      Max 
@@ -105,12 +105,12 @@
 		\vspace{1cm}
 		
 		\item Make a scatterplot of the two variables and add the regression line. 
-		\lstinputlisting[language=R, firstline=15, lastline=17]{PS3Answers.R} 
+		\lstinputlisting[language=R, firstline=13, lastline=15]{PS3Answers.R} 
 		\includegraphics{Q1P1.png}		
 			\vspace{3cm}
 		
 		\item Save the residuals of the model in a separate object.
-		\lstinputlisting[language=R, firstline=19, lastline=29]{PS3Answers.R}
+		\lstinputlisting[language=R, firstline=17, lastline=25]{PS3Answers.R}
 			\includegraphics{Q1P2.png}
 			\vspace{2cm}
 		\item Write the prediction equation.
@@ -256,7 +256,10 @@
 		$y=0.0355x_{1}+0.2569x_{2}+0.4486$
 		
 			\vspace{5cm}
-		\item What is it in this output that is identical to the output in Question 4? Why do you think this is the case?	\vspace{5cm}
+		\item What is it in this output that is identical to the output in Question 4? Why do you think this is the case?	
+		
+		The p-values are identical to the output of Question 4, illustrating that the significance of the two plots are identical to each other.
+		\vspace{5cm}
 	%	\item Reflect on your finding. Don't write anything. Just think about it.
 	\end{enumerate}
 
