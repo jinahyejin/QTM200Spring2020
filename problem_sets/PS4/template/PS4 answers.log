@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.28)  24 FEB 2020 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.28)  24 FEB 2020 12:50
 entering extended mode
 **"./PS4 answers.tex"
 ("PS4 answers.tex"
@@ -1162,19 +1162,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-(PS4Answers.R) [5] (PS4Answers.R) (PS4Answers.R) [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+(PS4Answers.R) [5] (PS4Answers.R) [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
  ("PS4 answers.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
 Package rerunfilecheck Info: File `"PS4 answers".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
- 23881 strings out of 492484
- 417489 string characters out of 3122054
+ 23871 strings out of 492484
+ 417282 string characters out of 3122054
  724284 words of memory out of 3000000
  27692 multiletter control sequences out of 15000+200000
  15377 words of font info for 63 fonts, out of 3000000 for 9000
@@ -1198,9 +1198,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Jina/AppData/Local
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
 Users/Jina/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb>
-Output written on "PS4 answers.pdf" (6 pages, 164795 bytes).
+Output written on "PS4 answers.pdf" (6 pages, 165875 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

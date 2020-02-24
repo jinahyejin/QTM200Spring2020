@@ -206,18 +206,32 @@ Below is the result of a regression with two variables and a constant.  The depe
 \vspace{.5cm}
 \begin{enumerate}
 	\item [(a)] Use the results to determine whether having these yard signs in a precinct affects vote share (e.g., conduct a hypothesis test with $\alpha = .05$).
+	
+	$H_{0}= \mu_{0} = 0$
+	
+	$H_{a}= \mu_{0} \neq 0$
+	
 		\lstinputlisting[language=R, firstline=26, lastline=34]{PS4Answers.R}
-	\newpage		
+		
+	We reject the null hypothesis as the p value is smaller than the alpha of 0.05. Therefore, having the yard signs in a precinct affects vote share. 
+		
 	\item [(b)]  Use the results to determine whether being
 	next to precincts with these yard signs affects vote
 	share (e.g., conduct a hypothesis test with $\alpha = .05$).
-	\lstinputlisting[language=R, firstline=37, lastline=41]{PS4Answers.R}
+	
+	$H_{0}= \mu_{0} = 0$
+	
+	$H_{a}= \mu_{0} \neq 0$
+	\lstinputlisting[language=R, firstline=36, lastline=42]{PS4Answers.R}
+	
+We reject the null hypothesis as the p value is smaller than the alpha of 0.05. Therefore, being next to the precincts with these yard signs have an effect on vote share.
+	
 	\vspace{3cm}
 	\item [(c)] Interpret the coefficient for the constant term substantively.
 	
 	As the coefficient is 0.302, this shows that when there are no yard signs present in the district, the baseline proportion of voteshare for Ken Cuccinelli would be 0.302. 
-	
-	\lstinputlisting[language=R, firstline=26, lastline=34]{PS4Answers.R}
+		\vspace{3cm}
+
 	\item [(d)] Evaluate the model fit for this regression.  What does this	tell us about the importance of yard signs versus other factors that are not modeled?
 	
 	The model fit for this regression shows an $R^2$=0.094, illustrating that only 9.4\% of the variation is explained through the yard signs. This tells us that the importance of yard signs compared o other factors that are not modeled is comparably low - does not have much effect - on the changes in vote share.   

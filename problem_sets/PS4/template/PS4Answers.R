@@ -23,20 +23,20 @@ coefficient_assigned$se <- 0.016
 coefficient_adjacent <- 0.042
 
 #part A
-mbar = 0.42 
-mu0 = 0.302
-sigma = 0.016*(sqrt(30))
-n = 131
-z = (mbar-mu0)/(sigma/sqrt(n))
+xbar = 0.042 #precinct assigned law sign coefficient
+mu0 = 0 #null hypothesis
+sigma = 0.016*(sqrt(30)) # finding standard deviation
+n = 131 #number of samples
+z = (xbar-mu0)/(sigma/sqrt(n)) #z-score
 z
-alpha = 0.05
-z0.5alpha = qnorm(1-alpha/2)
-c(-z0.5alpha, z0.5alpha)
-
+alpha = 0.05 #given alpha
+2*pnorm(-abs(z)) #determining the p value 
+p = 4.13e-8
+  
 #Part b
-sigma2 = 0.13*(sqrt(76))
-z2 = (mbar-mu0)/(sigma2/sqrt(n))
-
-z0.5alpha2 = qnorm(1-alpha/2)
-c(-z0.5alpha2, z0.5alpha2)
-
+sigma2 = 0.013*(sqrt(76))
+z2 = (xbar-mu0)/(sigma2/sqrt(n))
+z2
+alpha = 0.05 #given alpha
+2*pnorm(-abs(z2)) #determining the p value 
+p = 3.328e-5
