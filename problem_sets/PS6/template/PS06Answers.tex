@@ -76,93 +76,194 @@
 	\end{itemize}
 	
 	\vspace{.5cm}
-\section*{Question 1 (50 points): Biology}
-\vspace{.25cm}
-\noindent Load in the data labelled \texttt{cholesterol.csv} on GitHub, which contains an observational study of 315 observations.
-
-\begin{itemize}
-	\item
-	Response variable: 
-	\begin{itemize}
-		\item \texttt{cholCat}: 1 if the individual has high cholesterol; 0 if the individual does not have high cholesterol
-	\end{itemize}
-	\item
-	Explanatory variables: 
+	\section*{Question 1 (50 points): Biology}
+	\vspace{.25cm}
+	\noindent Load in the data labelled \texttt{cholesterol.csv} on GitHub, which contains an observational study of 315 observations.
+	
 	\begin{itemize}
 		\item
-		\texttt{sex}: 1 Male; 0 Female
-		\item
-		\texttt{fat}: grams of fat consumed per day
-		
-	\end{itemize}
-	
-\end{itemize}
-
-\newpage
-\noindent Please answer the following questions:
-
-\begin{enumerate}
-	\item
-	We are interested in predicting the cholesterol category based on sex and fat intake.
-	\begin{enumerate}
-		\item
-		Fit an additive model. Provide the summary output, the global null hypothesis, and $p$-value. Please describe the results and provide a conclusion.
-		%\item
-		%How many iterations did it take to find the maximum likelihood estimates?
-	\end{enumerate}
-	
-	\item
-	If explanatory variables are significant in this model, then
-	\begin{enumerate}
-		\item
-		For women, how does increasing their fat intake by 1 gram per day change their odds on being in the high cholesterol group? (Interpretation of a coefficient)
-		\item
-		For men, how does increasing their fat intake by 1 gram per day change their odds on being in the high cholesterol group? (Interpretation of a coefficient)
-		\item
-		What is the estimated probability of a woman with a fat intake of 100 grams per day being in the high cholesterol group? 
-		\item
-		Would the answers to 2a and 2b potentially change if we included the interaction term in this model? Why? 
+		Response variable: 
 		\begin{itemize}
-			\item Perform a test to see if including an interaction is appropriate.
+			\item \texttt{cholCat}: 1 if the individual has high cholesterol; 0 if the individual does not have high cholesterol
 		\end{itemize}
-%		\item
-%		If you consider all people who have a given fat intake, how does changing from being a female to a male change the odds on being in the high cholesterol group? (For additive model)
+		\item
+		Explanatory variables: 
+		\begin{itemize}
+			\item
+			\texttt{sex}: 1 Male; 0 Female
+			\item
+			\texttt{fat}: grams of fat consumed per day
+			
+		\end{itemize}
+		
+	\end{itemize}
 	
+	\newpage
+	\noindent Please answer the following questions:
+	
+	\begin{enumerate}
+		\item
+		We are interested in predicting the cholesterol category based on sex and fat intake.
+		\begin{enumerate}
+			\item
+			Fit an additive model. Provide the summary output, the global null hypothesis, and $p$-value. Please describe the results and provide a conclusion.
+			%\item
+			%How many iterations did it take to find the maximum likelihood estimates?
+			
+		\lstinputlisting[language=R, firstline=3, lastline=5]{PS6Answers.R}
+		
+		
+			\begin{verbatim}
+		
+		Call:
+		glm(formula = cholCat ~ sex + fat, family = binomial(link = "logit"), 
+		data = cholesterol)
+		
+		Deviance Residuals: 
+		Min        1Q    Median        3Q       Max  
+		-2.89662  -0.73093   0.07127   0.64186   2.23806  
+		
+		Coefficients:
+		Estimate Std. Error z value Pr(>|z|)    
+		(Intercept) -4.759162   0.563834  -8.441   <2e-16 ***
+		sex          1.356750   0.552130   2.457    0.014 *  
+		fat          0.065729   0.007826   8.399   <2e-16 ***
+		---
+		Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+		
+		(Dispersion parameter for binomial family taken to be 1)
+		
+		Null deviance: 435.54  on 314  degrees of freedom
+		Residual deviance: 279.58  on 312  degrees of freedom
+		AIC: 285.58
+		
+		Number of Fisher Scoring iterations: 5
+		\end{verbatim}
+	
+	The global null hypothesis:
+	
+	$H_{o}: all slopes = 0$
+	
+	$H_{a}: at least one \beta_{j} not equal to one$
+	
+	
+	The results show that p the value is < 0.01, we can conclude that at least one predictor is reliable in the model.
+	
+	
+		\end{enumerate}
+		
+		\item
+		If explanatory variables are significant in this model, then
+		\begin{enumerate}
+			\item
+			For women, how does increasing their fat intake by 1 gram per day change their odds on being in the high cholesterol group? (Interpretation of a coefficient)
+		
+		For women, increasing the fat intake by 1 gram, increases the odds of being in high cholesterol group by a multiplicative factor 1.067, it increases the odd by 6.79\%. 
+			\item
+			For men, how does increasing their fat intake by 1 gram per day change their odds on being in the high cholesterol group? (Interpretation of a coefficient)
+			
+	For men, by increasing the their fat intake by 1 gram, increases odds of being in a high cholesterol group by a multiplicative factor of 0.0158, meaning it increases the odds by 1.59\%.
+			\item
+			What is the estimated probability of a woman with a fat intake of 100 grams per day being in the high cholesterol group? 
+			
+			The estimated probability of a woman with a fat intake of 100 grams per day being in the high cholesterol group is 14\%. 
+			\item	
+			Would the answers to 2a and 2b potentially change if we included the interaction term in this model? Why? 
+		
+			\begin{itemize}
+				\item Perform a test to see if including an interaction is appropriate.
+			\end{itemize}
+			%		\item
+			%		If you consider all people who have a given fat intake, how does changing from being a female to a male change the odds on being in the high cholesterol group? (For additive model)
+	\lstinputlisting[language=R, firstline=7, lastline=8]{PS6Answers.R}
+		Interaction model:
+		\begin{verbatim}
+		Call:
+		glm(formula = cholCat ~ sex * fat, family = binomial(link = "logit"), 
+		data = cholesterol)
+		
+		Deviance Residuals: 
+		Min        1Q    Median        3Q       Max  
+		-2.86893  -0.72131   0.06984   0.65091   2.22120  
+		
+		Coefficients:
+		Estimate Std. Error z value Pr(>|z|)    
+		(Intercept) -4.674853   0.587978  -7.951 1.85e-15 ***
+		sex          0.541829   1.924729   0.282    0.778    
+		fat          0.064513   0.008187   7.880 3.28e-15 ***
+		sex:fat      0.012351   0.028011   0.441    0.659    
+		---
+		Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+		
+		(Dispersion parameter for binomial family taken to be 1)
+		
+		Null deviance: 435.54  on 314  degrees of freedom
+		Residual deviance: 279.37  on 311  degrees of freedom
+		AIC: 287.37
+		
+		Number of Fisher Scoring iterations: 6
+		\end{verbatim}
+		
+		There is no evidence that including an interactive effect of sex and fat intake is a significant predictor for the odds being in a high cholesterol group. 
+		
+		\end{enumerate}
+	\end{enumerate}
+	\newpage
+	
+	
+	\section*{Question 2 (50 points): Political Economy}
+	\vspace{.25cm}
+	\noindent We are interested in how governments' management of public resources impacts economic prosperity. Our data come from \href{https://www.researchgate.net/profile/Adam_Przeworski/publication/240357392_Classifying_Political_Regimes/links/0deec532194849aefa000000/Classifying-Political-Regimes.pdf}{Alvarez, Cheibub, Limongi, and Przeworski (1996)} and is labelled \texttt{gdpChange.csv} on GitHub. The dataset covers 135 countries observed between 1950 or the year of independence or the first year forwhich data on economic growth are available ("entry year"), and 1990 or the last year for which data on economic growth are available ("exit year"). The unit of analysis is a particular country during a particular year, for a total $>$ 3,500 observations. 
+	
+	\begin{itemize}
+		\item
+		Response variable: 
+		\begin{itemize}
+			\item \texttt{GDPWdiff}: Difference in GDP between year $t$ and $t-1$. Possible categories include: "positive", "negative", or "no change"
+		\end{itemize}
+		\item
+		Explanatory variables: 
+		\begin{itemize}
+			\item
+			\texttt{REG}: 1=Democracy; 0=Non-Democracy
+			\item
+			\texttt{OIL}: 1=if the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%; 0= otherwise
+		\end{itemize}
+		
+	\end{itemize}
+	
+	\noindent Please answer the following questions:
+	
+	\begin{enumerate}
+		\item Construct and interpret an unordered multinomial logit with \texttt{GDPWdiff} as the output and "no change" as the reference category, including the estimated cutoff points and coefficients.
+		
+	\begin{verbatim}
+		Coefficients:
+		(Intercept)       REG        OIL
+		no change  -3.8011902 -1.351703 -7.9240683
+		positive    0.7284081  0.389905 -0.2076511
+		
+		Std. Errors:
+		(Intercept)        REG        OIL
+		no change  0.27014596 0.75825317 32.9772055
+		positive   0.04789662 0.07552484  0.1158094
+		
+		Residual Deviance: 4678.728 
+		AIC: 4690.728 
+		> 
+		\end{verbatim}
+	
+		Coefficients:
+	\begin{verbatim}	
+		          (Intercept)       REG          OIL
+		no change  0.02234416 0.2587991 0.0003619269
+		positive   2.07177984 1.4768404 0.8124904479
+		
+	\end{verbatim}	
+		\item Construct and interpret an ordered multinomial logit with \texttt{GDPWdiff} as the outcome variable, including the estimated cutoff points and coefficients.
+
 		
 	\end{enumerate}
-\end{enumerate}
-\newpage
-
-
-\section*{Question 2 (50 points): Political Economy}
-\vspace{.25cm}
-\noindent We are interested in how governments' management of public resources impacts economic prosperity. Our data come from \href{https://www.researchgate.net/profile/Adam_Przeworski/publication/240357392_Classifying_Political_Regimes/links/0deec532194849aefa000000/Classifying-Political-Regimes.pdf}{Alvarez, Cheibub, Limongi, and Przeworski (1996)} and is labelled \texttt{gdpChange.csv} on GitHub. The dataset covers 135 countries observed between 1950 or the year of independence or the first year forwhich data on economic growth are available ("entry year"), and 1990 or the last year for which data on economic growth are available ("exit year"). The unit of analysis is a particular country during a particular year, for a total $>$ 3,500 observations. 
-
-\begin{itemize}
-	\item
-	Response variable: 
-	\begin{itemize}
-		\item \texttt{GDPWdiff}: Difference in GDP between year $t$ and $t-1$. Possible categories include: "positive", "negative", or "no change"
-	\end{itemize}
-	\item
-	Explanatory variables: 
-	\begin{itemize}
-		\item
-		\texttt{REG}: 1=Democracy; 0=Non-Democracy
-		\item
-		\texttt{OIL}: 1=if the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%; 0= otherwise
-	\end{itemize}
-	
-\end{itemize}
-
-\noindent Please answer the following questions:
-
-\begin{enumerate}
-	\item Construct and interpret an unordered multinomial logit with \texttt{GDPWdiff} as the output and "no change" as the reference category, including the estimated cutoff points and coefficients.
-	\item Construct and interpret an ordered multinomial logit with \texttt{GDPWdiff} as the outcome variable, including the estimated cutoff points and coefficients.
 	
 	
-\end{enumerate}
-
-
 \end{document}
